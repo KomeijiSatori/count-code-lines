@@ -1,5 +1,6 @@
 from queue import Queue
 import os
+import sys
 
 
 def isValidFile(f):
@@ -28,4 +29,7 @@ def countLine(p = "."):
 
 
 if __name__ == "__main__":
-	print(countLine())
+	if  len(sys.argv) == 2:
+		print(countLine(sys.argv[1]))
+	else:
+		print(countLine())
